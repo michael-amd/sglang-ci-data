@@ -2,11 +2,11 @@
 [nightly] SGL Nightly Benchmark Started
 [nightly] ==========================================
 [nightly] Command: perf_nightly.sh --mode=sanity --hardware=mi30x --sanity-trials=1
-[nightly] Start time: 2025-10-06 19:12:04 PDT
+[nightly] Start time: 2025-10-06 19:26:49 PDT
 [nightly] Machine: dell300x-pla-t10-23
 [nightly] Working directory: /mnt/raid/michael/sglang-ci
 [nightly] Script location: /mnt/raid/michael/sglang-ci/perf_nightly.sh
-[nightly] Process ID: 1083910
+[nightly] Process ID: 1107568
 [nightly] ==========================================
 
 [nightly] Runtime Environment:
@@ -19,7 +19,7 @@
 [nightly] Model: sanity, Mode(s): sanity
 [nightly] Created process lock: /tmp/perf_nightly_sanity.lock
 [nightly] GPU is busy. Attempting to stop running Docker containers...
-[nightly] Stopping running containers: 9d39b25ef4b9
+[nightly] Stopping running containers: 1e4b8118c13e
 [nightly] Waiting 15s for GPU to become idle...
 [nightly] WARN: GPU may still be busy, but proceeding as requested.
 [nightly] Searching for non-SRT images for sanity for the last 1 days...
@@ -35,7 +35,7 @@
 [nightly] ==========================================
 [nightly] Checking GPU status before starting benchmarks for rocm/sgl-dev:v0.5.3-rocm630-mi30x-20251006...
 [nightly] GPU is busy. Attempting to stop running Docker containers...
-[nightly] Stopping running containers: abdbe1030f4b
+[nightly] Stopping running containers: 56109f4f35e8
 [nightly] Waiting 15s for GPU to become idle...
 [nightly] WARN: GPU may still be busy, but proceeding as requested.
 [nightly] INFO: No completion check defined for mode 'sanity'. Assuming not complete.
@@ -47,15 +47,3 @@
 [nightly] === Starting nightly SANITY sanity benchmark ===
 [nightly] Launching sanity check inside sgl-dev_v0.5.3-rocm630-mi30x-20251006
 [nightly] Executing: python3 '/mnt/raid/michael/sglang-ci/test/sanity_check.py' --docker-image='rocm/sgl-dev:v0.5.3-rocm630-mi30x-20251006' --hardware='mi30x' --trials=1 --log-dir='/mnt/raid/michael/sglang-ci/test/sanity_check_log/mi30x'
-[nightly] === Sanity check failed (exit code: 130) ===
-[nightly] Teams notifications disabled - --teams-webhook-url not provided
-[nightly] === Starting post-processing (CSV processing, plot generation, Teams notifications) ===
-[nightly] === Sanity post-processing completed for SANITY ===
-[nightly] ==========================================
-[nightly] Completed benchmarks for image: rocm/sgl-dev:v0.5.3-rocm630-mi30x-20251006
-[nightly] Stopping container sgl-dev_v0.5.3-rocm630-mi30x-20251006 to release resources...
-[nightly] ==========================================
-[nightly] ==========================================
-[nightly] All benchmarks completed for 1 image(s)
-[nightly] ==========================================
-[nightly] Cleaning up process lock...
