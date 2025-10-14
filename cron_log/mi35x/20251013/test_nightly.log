@@ -3,10 +3,10 @@
 [test] ==========================================
 [test] Command: test_nightly.sh --hardware=mi35x --teams-webhook-url=https://prod-99.westus.logic.azure.com/workflows/44b23afb37e74288b6b006c60bbe65b2/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=ucbP9AJ9WeZtxe95Wmi8TfLUjiEo0AZSZP4Y_cNgWS0
 [test] Start time: 2025-10-13 10:05:01 CDT
-[test] Machine: smci355-ccs-aus-m12-17
+[test] Machine: smci355-ccs-aus-m15-21.cs-aus.dcgpu
 [test] Working directory: /mnt/raid/michael/sglang-ci
 [test] Script location: /mnt/raid/michael/sglang-ci/test_nightly.sh
-[test] Process ID: 3422988
+[test] Process ID: 2565630
 [test] Created process lock: /tmp/test_nightly.lock
 [test] ==========================================
 
@@ -16,8 +16,7 @@
 [test] Docker daemon accessible - proceeding...
 [test] Hardware: mi35x, ROCM Version: rocm700
 [test] GPU is busy. Attempting to stop running Docker containers...
-[test] Stopping running containers: e1c318e63da6
-b3067e4f4ff2
+[test] Stopping running containers: 48dcf64eb98b
 [test] Waiting 15s for GPU to become idle...
 [test] WARN: GPU may still be busy, but proceeding as requested.
 [test] Searching for latest non-SRT image...
@@ -67,36 +66,34 @@ d0bea76d67a7: Pulling fs layer
 4ccd6199720d: Pulling fs layer
 23c742c2c17c: Pulling fs layer
 db648172ffc0: Pulling fs layer
+0c9fa285dac5: Waiting
 a72ed5f7123d: Pulling fs layer
+d0bea76d67a7: Waiting
 103e4cd55276: Pulling fs layer
 0e209fc7f1e3: Pulling fs layer
-0c9fa285dac5: Waiting
-d0bea76d67a7: Waiting
 a030f69fad7e: Pulling fs layer
-8437b7a90903: Pulling fs layer
 33bf2554cdd9: Waiting
-8e6efed98321: Pulling fs layer
-d4e50f761df7: Pulling fs layer
-07d507c586eb: Pulling fs layer
-4ccd6199720d: Waiting
-db648172ffc0: Waiting
-103e4cd55276: Waiting
-8437b7a90903: Waiting
 23c742c2c17c: Waiting
-8e6efed98321: Waiting
+4ccd6199720d: Waiting
+8437b7a90903: Pulling fs layer
+db648172ffc0: Waiting
+8e6efed98321: Pulling fs layer
 a72ed5f7123d: Waiting
-0e209fc7f1e3: Waiting
-07d507c586eb: Waiting
+d4e50f761df7: Pulling fs layer
+103e4cd55276: Waiting
+07d507c586eb: Pulling fs layer
+8437b7a90903: Waiting
 a030f69fad7e: Waiting
+8e6efed98321: Waiting
+0e209fc7f1e3: Waiting
 d4e50f761df7: Waiting
-a852cd076666: Verifying Checksum
+07d507c586eb: Waiting
 a852cd076666: Download complete
 a852cd076666: Pull complete
-06843fb81301: Download complete
 4f4fb700ef54: Download complete
 4f4fb700ef54: Pull complete
 06843fb81301: Pull complete
-d0bea76d67a7: Download complete
+d0bea76d67a7: Verifying Checksum
 d0bea76d67a7: Pull complete
 0c9fa285dac5: Verifying Checksum
 0c9fa285dac5: Download complete
@@ -105,9 +102,7 @@ d0bea76d67a7: Pull complete
 db648172ffc0: Verifying Checksum
 db648172ffc0: Download complete
 0c9fa285dac5: Pull complete
-a72ed5f7123d: Verifying Checksum
 a72ed5f7123d: Download complete
-103e4cd55276: Verifying Checksum
 103e4cd55276: Download complete
 33bf2554cdd9: Verifying Checksum
 33bf2554cdd9: Download complete
@@ -116,24 +111,24 @@ a72ed5f7123d: Download complete
 8437b7a90903: Verifying Checksum
 8437b7a90903: Download complete
 33bf2554cdd9: Pull complete
-a030f69fad7e: Verifying Checksum
-a030f69fad7e: Download complete
+4ccd6199720d: Verifying Checksum
+4ccd6199720d: Download complete
 d4e50f761df7: Verifying Checksum
 d4e50f761df7: Download complete
 07d507c586eb: Verifying Checksum
 07d507c586eb: Download complete
-4ccd6199720d: Verifying Checksum
-4ccd6199720d: Download complete
+a030f69fad7e: Verifying Checksum
+a030f69fad7e: Download complete
 4ccd6199720d: Pull complete
 23c742c2c17c: Pull complete
 db648172ffc0: Pull complete
 a72ed5f7123d: Pull complete
 103e4cd55276: Pull complete
-8e6efed98321: Verifying Checksum
-8e6efed98321: Download complete
 0e209fc7f1e3: Pull complete
 a030f69fad7e: Pull complete
 8437b7a90903: Pull complete
+8e6efed98321: Verifying Checksum
+8e6efed98321: Download complete
 8e6efed98321: Pull complete
 d4e50f761df7: Pull complete
 07d507c586eb: Pull complete
@@ -148,24 +143,23 @@ docker.io/rocm/sgl-dev:v0.5.3.post1-rocm700-mi35x-20251013
 [test] ==========================================
 [test] Checking GPU status before starting tests for rocm/sgl-dev:v0.5.3.post1-rocm700-mi35x-20251013...
 [test] GPU is busy. Attempting to stop running Docker containers...
-[test] Stopping running containers: c26e165e2b40
+[test] Stopping running containers: 86047d467b8b
 [test] Waiting 15s for GPU to become idle...
 [test] WARN: GPU may still be busy, but proceeding as requested.
 [test] Using Docker image: rocm/sgl-dev:v0.5.3.post1-rocm700-mi35x-20251013
 [test] Container name: sgl-dev_v0.5.3.post1-rocm700-mi35x-20251013
 [test] Creating container sgl-dev_v0.5.3.post1-rocm700-mi35x-20251013
-12526370a72d992f7e5a7afc297f3647940692261c73c0aefb9c63a9d020aec1
+ed12ae6d94dc1ed7f1def4b12adcc9ae693eb6d3e0d1e4052d17b40affb0979b
 [test] === Starting test_custom_allreduce unit test ===
 [test] Test directory: /sgl-workspace/sglang/test/srt
 [test] Log file: /mnt/raid/michael/sglang-ci/test/unit-test-backend-8-gpu-CAR-amd/v0.5.3.post1-rocm700-mi35x-20251013.log
 [test] Test command: CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python3 -m unittest test_custom_allreduce.TestCustomAllReduce
 [test] Running unit test inside sgl-dev_v0.5.3.post1-rocm700-mi35x-20251013...
-[test] === Unit test FAILED for rocm/sgl-dev:v0.5.3.post1-rocm700-mi35x-20251013 (exit code: 137) ===
+[test] === Unit test PASSED for rocm/sgl-dev:v0.5.3.post1-rocm700-mi35x-20251013 ===
 [test] Log saved to: /mnt/raid/michael/sglang-ci/test/unit-test-backend-8-gpu-CAR-amd/v0.5.3.post1-rocm700-mi35x-20251013.log
-[test] Check the log file for detailed error information
 [test] Sending Teams notification...
 📋 Parsing log file: /mnt/raid/michael/sglang-ci/test/unit-test-backend-8-gpu-CAR-amd/v0.5.3.post1-rocm700-mi35x-20251013.log
-✅ Successfully sent unit test fail alert to Teams
+✅ Successfully sent unit test pass alert to Teams
    (Power Automate flow accepted - message processing asynchronously)
 [test] Stopping container sgl-dev_v0.5.3.post1-rocm700-mi35x-20251013 to release resources...
 [test] ==========================================
