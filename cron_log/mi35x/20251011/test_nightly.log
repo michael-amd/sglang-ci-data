@@ -3,10 +3,10 @@
 [test] ==========================================
 [test] Command: test_nightly.sh --hardware=mi35x --teams-webhook-url=https://prod-99.westus.logic.azure.com/workflows/44b23afb37e74288b6b006c60bbe65b2/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=ucbP9AJ9WeZtxe95Wmi8TfLUjiEo0AZSZP4Y_cNgWS0
 [test] Start time: 2025-10-11 10:05:01 CDT
-[test] Machine: smci355-ccs-aus-m12-17
+[test] Machine: smci355-ccs-aus-m15-21.cs-aus.dcgpu
 [test] Working directory: /mnt/raid/michael/sglang-ci
 [test] Script location: /mnt/raid/michael/sglang-ci/test_nightly.sh
-[test] Process ID: 2638835
+[test] Process ID: 1479323
 [test] Created process lock: /tmp/test_nightly.lock
 [test] ==========================================
 
@@ -16,8 +16,7 @@
 [test] Docker daemon accessible - proceeding...
 [test] Hardware: mi35x, ROCM Version: rocm700
 [test] GPU is busy. Attempting to stop running Docker containers...
-[test] Stopping running containers: 47e5ba395901
-007babfb0f90
+[test] Stopping running containers: 4e12c8f87266
 [test] Waiting 15s for GPU to become idle...
 [test] WARN: GPU may still be busy, but proceeding as requested.
 [test] Searching for latest non-SRT image...
@@ -74,39 +73,36 @@ e01a31504502: Pulling fs layer
 196ccd448c52: Pulling fs layer
 b554181230dc: Pulling fs layer
 490a74bd6209: Pulling fs layer
+984784cb6609: Waiting
 c7df91d3a2a6: Pulling fs layer
-e01a31504502: Waiting
-9e9868bfa27d: Waiting
-01eccb04ba36: Waiting
-9aa92dc39518: Waiting
+2e948510732d: Waiting
+490a74bd6209: Waiting
+c7df91d3a2a6: Waiting
+a9420b471d0b: Waiting
 1d17a12fada3: Waiting
 196ccd448c52: Waiting
 b554181230dc: Waiting
 76bd17e0e4da: Waiting
-490a74bd6209: Waiting
+9e9868bfa27d: Waiting
+e01a31504502: Waiting
+01eccb04ba36: Waiting
+9aa92dc39518: Waiting
 98ad3efc344a: Waiting
-c7df91d3a2a6: Waiting
-984784cb6609: Waiting
-a9420b471d0b: Waiting
-2e948510732d: Waiting
-45e2c13e1569: Verifying Checksum
+7f2247bdc391: Verifying Checksum
+7f2247bdc391: Download complete
 45e2c13e1569: Download complete
+7f2247bdc391: Pull complete
 4f4fb700ef54: Verifying Checksum
 4f4fb700ef54: Download complete
-76bd17e0e4da: Verifying Checksum
-76bd17e0e4da: Download complete
-7f2247bdc391: Download complete
-7f2247bdc391: Pull complete
 4f4fb700ef54: Pull complete
 45e2c13e1569: Pull complete
+76bd17e0e4da: Download complete
 76bd17e0e4da: Pull complete
 98ad3efc344a: Verifying Checksum
 98ad3efc344a: Download complete
-a9420b471d0b: Verifying Checksum
 a9420b471d0b: Download complete
 9e9868bfa27d: Verifying Checksum
 9e9868bfa27d: Download complete
-e01a31504502: Verifying Checksum
 e01a31504502: Download complete
 01eccb04ba36: Download complete
 98ad3efc344a: Pull complete
@@ -117,15 +113,16 @@ e01a31504502: Download complete
 196ccd448c52: Verifying Checksum
 196ccd448c52: Download complete
 984784cb6609: Pull complete
-b554181230dc: Verifying Checksum
-b554181230dc: Download complete
-490a74bd6209: Verifying Checksum
-490a74bd6209: Download complete
-c7df91d3a2a6: Download complete
-1d17a12fada3: Verifying Checksum
-1d17a12fada3: Download complete
 2e948510732d: Verifying Checksum
 2e948510732d: Download complete
+490a74bd6209: Verifying Checksum
+490a74bd6209: Download complete
+c7df91d3a2a6: Verifying Checksum
+c7df91d3a2a6: Download complete
+b554181230dc: Verifying Checksum
+b554181230dc: Download complete
+1d17a12fada3: Verifying Checksum
+1d17a12fada3: Download complete
 2e948510732d: Pull complete
 a9420b471d0b: Pull complete
 9e9868bfa27d: Pull complete
@@ -148,13 +145,13 @@ docker.io/rocm/sgl-dev:v0.5.3.post1-rocm700-mi35x-20251011
 [test] ==========================================
 [test] Checking GPU status before starting tests for rocm/sgl-dev:v0.5.3.post1-rocm700-mi35x-20251011...
 [test] GPU is busy. Attempting to stop running Docker containers...
-[test] Stopping running containers: c173d04341f7
+[test] Stopping running containers: a52d705fb5d3
 [test] Waiting 15s for GPU to become idle...
 [test] WARN: GPU may still be busy, but proceeding as requested.
 [test] Using Docker image: rocm/sgl-dev:v0.5.3.post1-rocm700-mi35x-20251011
 [test] Container name: sgl-dev_v0.5.3.post1-rocm700-mi35x-20251011
 [test] Creating container sgl-dev_v0.5.3.post1-rocm700-mi35x-20251011
-2ed8f5661c1533c3dc478354207cdcca6a45cbfffb8a597ef93f7de0e26d321d
+cbc04129baed17af4e35c1ddf46afdf71c41ab45e51e6867266dcbbb45cc4943
 [test] === Starting test_custom_allreduce unit test ===
 [test] Test directory: /sgl-workspace/sglang/test/srt
 [test] Log file: /mnt/raid/michael/sglang-ci/test/unit-test-backend-8-gpu-CAR-amd/v0.5.3.post1-rocm700-mi35x-20251011.log
