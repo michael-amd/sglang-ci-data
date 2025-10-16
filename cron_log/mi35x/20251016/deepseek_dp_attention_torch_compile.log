@@ -1,12 +1,12 @@
 [nightly] ==========================================
 [nightly] SGL Nightly Benchmark Started
 [nightly] ==========================================
-[nightly] Command: perf_nightly.sh --model=deepseek --model-path=/data/deepseek-ai/DeepSeek-R1-MXFP4-Preview --mode=online --hardware=mi35x --check-dp-attention --enable-torch-compile --teams-webhook-url=https://prod-99.westus.logic.azure.com/workflows/44b23afb37e74288b6b006c60bbe65b2/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=ucbP9AJ9WeZtxe95Wmi8TfLUjiEo0AZSZP4Y_cNgWS0
-[nightly] Start time: 2025-10-16 12:35:02 PDT
-[nightly] Machine: smci355-ccs-aus-m12-17
+[nightly] Command: perf_nightly.sh --model=deepseek --model-path=/data/models/amd-DeepSeek-R1-MXFP4-Preview --model-name=DeepSeek-R1-MXFP4-Preview --mode=online --hardware=mi35x --check-dp-attention --enable-torch-compile --teams-webhook-url=https://prod-99.westus.logic.azure.com/workflows/44b23afb37e74288b6b006c60bbe65b2/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=ucbP9AJ9WeZtxe95Wmi8TfLUjiEo0AZSZP4Y_cNgWS0
+[nightly] Start time: 2025-10-16 12:30:01 PDT
+[nightly] Machine: smci355-ccs-aus-m15-21.cs-aus.dcgpu
 [nightly] Working directory: /mnt/raid/michael/sglang-ci
 [nightly] Script location: /mnt/raid/michael/sglang-ci/perf_nightly.sh
-[nightly] Process ID: 731808
+[nightly] Process ID: 1757997
 [nightly] ==========================================
 
 [nightly] Runtime Environment:
@@ -16,13 +16,13 @@
 [nightly] Teams webhook URL provided via command line - notifications enabled
 [nightly] DP attention mode enabled via command line
 [nightly] Torch compile mode enabled via command line
-[nightly] Custom model path provided: /data/deepseek-ai/DeepSeek-R1-MXFP4-Preview
+[nightly] Custom model path provided: /data/models/amd-DeepSeek-R1-MXFP4-Preview
 [nightly] Hardware: mi35x, ROCM Version: rocm700
+[nightly] Custom model name provided: DeepSeek-R1-MXFP4-Preview
 [nightly] Model: deepseek, Mode(s): online
 [nightly] Created process lock: /tmp/perf_nightly_deepseek.lock
 [nightly] GPU is busy. Attempting to stop running Docker containers...
-[nightly] Stopping running containers: f3074c58443c
-432c2fcdf025
+[nightly] Stopping running containers: 59fe66c855c5
 [nightly] Waiting 15s for GPU to become idle...
 [nightly] WARN: GPU may still be busy, but proceeding as requested.
 [nightly] Searching for non-SRT images for deepseek for the last 1 days...
@@ -38,10 +38,10 @@
 [nightly] ==========================================
 [nightly] Checking GPU status before starting benchmarks for rocm/sgl-dev:v0.5.3.post2-rocm700-mi35x-20251016...
 [nightly] GPU is busy. Attempting to stop running Docker containers...
-[nightly] Stopping running containers: f1117d7f89b6
+[nightly] Stopping running containers: 617ab0de0083
 [nightly] Waiting 15s for GPU to become idle...
 [nightly] WARN: GPU may still be busy, but proceeding as requested.
-[nightly] Checking benchmark completion in: /mnt/raid/michael/sglang-ci/online/DeepSeek-V3-0324/v0.5.3.post2-rocm700-mi35x-20251016_DeepSeek-V3-0324_FP8_online
+[nightly] Checking benchmark completion in: /mnt/raid/michael/sglang-ci/online/DeepSeek-R1-MXFP4-Preview/v0.5.3.post2-rocm700-mi35x-20251016_DeepSeek-R1-MXFP4-Preview_FP8_online
 [nightly] Found 0 completed benchmark runs
 [nightly] INFO: Found 0/15 completed runs for rocm/sgl-dev:v0.5.3.post2-rocm700-mi35x-20251016 (online). Proceeding with benchmarks.
 [nightly] Using Docker image: rocm/sgl-dev:v0.5.3.post2-rocm700-mi35x-20251016
@@ -49,20 +49,52 @@
 [nightly] Reusing container sgl-dev_v0.5.3.post2-rocm700-mi35x-20251016
 [nightly] Custom model path not accessible in existing container. Recreating container...
 [nightly] Creating container sgl-dev_v0.5.3.post2-rocm700-mi35x-20251016
-[nightly] Custom model path /data/deepseek-ai/DeepSeek-R1-MXFP4-Preview requires mounting /data...
-77e2402d55f5383b25477c7a5e378186aa0d2aadf9f1fcd0bcabfa1efd8e63c8
+[nightly] Custom model path /data/models/amd-DeepSeek-R1-MXFP4-Preview requires mounting /data...
+bcfd82ea7b5c7b77a9e0f4a19d0cc7c00c94f6e1a97ad0b0e8ac06214bfb42b3
 [nightly] === Starting benchmark execution ===
 [nightly] === Starting nightly DEEPSEEK online benchmark ===
 [nightly] Launching deepseek_perf_online_csv.sh inside sgl-dev_v0.5.3.post2-rocm700-mi35x-20251016
-[nightly] Passing --model-name='DeepSeek-V3-0324' to DeepSeek benchmark
+[nightly] Passing --model-name='DeepSeek-R1-MXFP4-Preview' to DeepSeek benchmark
 [nightly] Adding --check-dp-attention flag for DeepSeek online benchmark
 [nightly] Adding --enable-torch-compile flag for DeepSeek online benchmark
-ERROR: Model directory not found at: /data/deepseek-ai/DeepSeek-R1-MXFP4-Preview
+Cleaning up...
+ERROR: Model directory not found at: /data/models/amd-DeepSeek-R1-MXFP4-Preview
        Use --download-model to download the model or provide correct path with --model
 ERROR: Found 1 validation error(s). Please fix them and try again.
-Cleaning up...
 [nightly] === Online benchmark dispatched for DEEPSEEK; check logs in sgl-dev_v0.5.3.post2-rocm700-mi35x-20251016 ===
 [nightly] === Starting post-processing (CSV processing, plot generation, Teams notifications) ===
-[nightly] Processing online CSV data and generating plots... Logs will be saved to /mnt/raid/michael/sglang-ci/online/DeepSeek-V3-0324/v0.5.3.post2-rocm700-mi35x-20251016_DeepSeek-V3-0324_FP8_online/process_and_generate_online_plots.log
+[nightly] Processing online CSV data and generating plots... Logs will be saved to /mnt/raid/michael/sglang-ci/online/DeepSeek-R1-MXFP4-Preview/v0.5.3.post2-rocm700-mi35x-20251016_DeepSeek-R1-MXFP4-Preview_FP8_online/process_and_generate_online_plots.log
 [nightly] Using plot date from image tag: 20251016
+[nightly] Sending Teams notification for deepseek online plots...
+[nightly] Adding benchmark date to Teams notification: 20251016
+[nightly] Teams notification using plot directory: /mnt/raid/michael/sglang-ci/plots_server
+[nightly] GitHub credentials not provided via environment - using plot server links only
+[nightly] To enable GitHub upload, set GITHUB_REPO and GITHUB_TOKEN environment variables
+[nightly] Including intelligent analysis (7 days lookback)
+[nightly] Adding --check-dp-attention flag for Teams notification
+[nightly] Adding --enable-torch-compile flag for Teams notification
+📡 Plot server base URL: http://10.235.26.27:8000
+📁 Plot directory: /mnt/raid/michael/sglang-ci/plots_server
+🗂️  Benchmark directory: /mnt/raid/michael/sglang-ci
+🔍 DP attention mode: Checking for RuntimeError and critical errors in server logs
+🔥 Torch compile mode: Looking for torch compile benchmark results
+🔍 Discovered 1 plot file(s) for deepseek online
+   - 20251014_DeepSeek-V3_online_standard.png -> http://10.235.26.27:8000/DeepSeek-V3-0324/online/20251014_DeepSeek-V3_online_standard.png
+🔍 Analyzing benchmark results for accuracy and performance...
+   No timing_summary log found for deepseek online on 20251016 - benchmark may not have run yet
+   No timing_summary log found for deepseek online on 20251016 - benchmark may not have run yet
+🔍 Sending adaptive card with plot links
+📊 Payload size: 0.00MB
+✅ Successfully sent Teams notification for deepseek online plots
+   (Power Automate flow accepted - message processing asynchronously)
+🎉 Teams notification sent successfully! (with intelligent analysis)
+[nightly] Teams notification sent successfully for deepseek online
+[nightly] === Online post-processing completed for DEEPSEEK ===
+[nightly] ==========================================
+[nightly] Completed benchmarks for image: rocm/sgl-dev:v0.5.3.post2-rocm700-mi35x-20251016
+[nightly] Stopping container sgl-dev_v0.5.3.post2-rocm700-mi35x-20251016 to release resources...
+[nightly] ==========================================
+[nightly] ==========================================
+[nightly] All benchmarks completed for 1 image(s)
+[nightly] ==========================================
 [nightly] Cleaning up process lock...
