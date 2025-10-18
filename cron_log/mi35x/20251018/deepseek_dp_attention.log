@@ -1,12 +1,12 @@
 [nightly] ==========================================
 [nightly] SGL Nightly Benchmark Started
 [nightly] ==========================================
-[nightly] Command: perf_nightly.sh --model=deepseek --model-path=/data/deepseek-ai/DeepSeek-R1-MXFP4-Preview --mode=online --hardware=mi35x --enable-torch-compile --teams-webhook-url=https://prod-99.westus.logic.azure.com/workflows/44b23afb37e74288b6b006c60bbe65b2/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=ucbP9AJ9WeZtxe95Wmi8TfLUjiEo0AZSZP4Y_cNgWS0
-[nightly] Start time: 2025-10-18 12:10:01 PDT
+[nightly] Command: perf_nightly.sh --model=deepseek --model-path=/data/deepseek-ai/DeepSeek-R1-MXFP4-Preview --mode=online --hardware=mi35x --check-dp-attention --teams-webhook-url=https://prod-99.westus.logic.azure.com/workflows/44b23afb37e74288b6b006c60bbe65b2/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=ucbP9AJ9WeZtxe95Wmi8TfLUjiEo0AZSZP4Y_cNgWS0
+[nightly] Start time: 2025-10-18 12:00:01 PDT
 [nightly] Machine: smci355-ccs-aus-m12-17
 [nightly] Working directory: /mnt/raid/michael/sglang-ci
 [nightly] Script location: /mnt/raid/michael/sglang-ci/perf_nightly.sh
-[nightly] Process ID: 1575922
+[nightly] Process ID: 1574590
 [nightly] ==========================================
 
 [nightly] Runtime Environment:
@@ -14,14 +14,14 @@
 [nightly] Testing Docker daemon access...
 [nightly] Docker daemon accessible - proceeding...
 [nightly] Teams webhook URL provided via command line - notifications enabled
-[nightly] Torch compile mode enabled via command line
+[nightly] DP attention mode enabled via command line
 [nightly] Custom model path provided: /data/deepseek-ai/DeepSeek-R1-MXFP4-Preview
 [nightly] Hardware: mi35x, ROCM Version: rocm700
 [nightly] Model: deepseek, Mode(s): online
 [nightly] Created process lock: /tmp/perf_nightly_deepseek.lock
 [nightly] GPU is busy. Attempting to stop running Docker containers...
-[nightly] Stopping running containers: 7a15e8d24d8a
-5c11be517bf0
+[nightly] Stopping running containers: c5c4f74e805b
+6229279c7b04
 [nightly] Waiting 15s for GPU to become idle...
 [nightly] WARN: GPU may still be busy, but proceeding as requested.
 [nightly] Searching for non-SRT images for deepseek for the last 1 days...
@@ -37,11 +37,9 @@
 [nightly] ==========================================
 [nightly] Checking GPU status before starting benchmarks for rocm/sgl-dev:v0.5.3.post3-rocm700-mi35x-20251018...
 [nightly] GPU is busy. Attempting to stop running Docker containers...
-[nightly] Stopping running containers: f3c6a3ae8ac9
+[nightly] Stopping running containers: 685169ec71c5
 [nightly] Waiting 15s for GPU to become idle...
 [nightly] WARN: GPU may still be busy, but proceeding as requested.
-[nightly] Checking benchmark completion in: /mnt/raid/michael/sglang-ci/online/DeepSeek-V3-0324/v0.5.3.post3-rocm700-mi35x-20251018_DeepSeek-V3-0324_FP8_online
-[nightly] Found 0 completed benchmark runs
 [nightly] INFO: Found 0/15 completed runs for rocm/sgl-dev:v0.5.3.post3-rocm700-mi35x-20251018 (online). Proceeding with benchmarks.
 [nightly] Using Docker image: rocm/sgl-dev:v0.5.3.post3-rocm700-mi35x-20251018
 [nightly] Container name: sgl-dev_v0.5.3.post3-rocm700-mi35x-20251018
@@ -49,12 +47,12 @@
 [nightly] Custom model path not accessible in existing container. Recreating container...
 [nightly] Creating container sgl-dev_v0.5.3.post3-rocm700-mi35x-20251018
 [nightly] Custom model path /data/deepseek-ai/DeepSeek-R1-MXFP4-Preview requires mounting /data...
-9be659e72c03ded0a250921b4e98c92d7cc6ac38f39e980250070af66e266a0a
+7a15e8d24d8ae00c617f772fb3779fc0c033ca4a10804907fd3c203311b12078
 [nightly] === Starting benchmark execution ===
 [nightly] === Starting nightly DEEPSEEK online benchmark ===
 [nightly] Launching deepseek_perf_online_csv.sh inside sgl-dev_v0.5.3.post3-rocm700-mi35x-20251018
 [nightly] Passing --model-name='DeepSeek-V3-0324' to DeepSeek benchmark
-[nightly] Adding --enable-torch-compile flag for DeepSeek online benchmark
+[nightly] Adding --check-dp-attention flag for DeepSeek online benchmark
 Cleaning up...
 ERROR: Model directory not found at: /data/deepseek-ai/DeepSeek-R1-MXFP4-Preview
        Use --download-model to download the model or provide correct path with --model
